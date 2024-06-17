@@ -1,0 +1,358 @@
+:root{
+    --primary-color:#00bfff;
+    --primary-color-light:#c6ebf8;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;  /*1 rem = 16px*/
+    
+    
+}
+.navbar .menu-item:hover {
+    border: 2px solid var(--primary-color); /* Blue border on hover */
+    border-radius: 20px; /* Maintain rounded corners */
+    background-color: #fff; /* White background on hover */
+    color: #333; /* Text color change on hover */
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px var(--primary-color-light);
+    transition: all 0.01s ease-in-out;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+.menu-item{
+    padding: 0.85rem;
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.btn-login{
+    border: 2px solid var(--primary-color); /* Blue border on hover */
+    border-radius: 20px; /* Maintain rounded corners */
+    background-color: #fff; /* White background on hover */
+    color: #333; /* Text color change on hover */
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 6.5rem;
+
+}
+.hero-text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-text p{
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.hero-text h1{
+    font-size: 3rem;
+}
+.hero-text h1 span{
+    color: var(--primary-color);
+}
+.hero-text ul{
+    margin: 1rem 2rem;
+}
+.hero-text ul li{
+    margin-bottom: 8px;
+}
+.hero-image{
+    width: 60%;
+}
+.hero-image img{
+    width: 100%;
+    height: 30rem;
+}
+.btn-get-it{
+    background-color: var(--primary-color);
+    width: 6rem;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.75rem;
+}
+
+/* Domain */
+.domain{
+    padding: 3.5rem;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+.domain h1{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+
+}
+.form-input{
+    font-size: 18px;
+    padding: 10px;
+    width: 30rem;
+    outline: none;
+    border: 3px solid white;
+}
+.btn-search{
+    font-size: 18px;
+    padding: 10px;
+    margin-left: -10px;
+    outline: none;
+    border: 3px solid white;
+}
+
+/* Plan/Pricing */
+.plan{
+    margin: 1rem 6.5rem;
+
+}
+.section-heading{
+    padding: 3rem;
+    text-align: center;
+}
+.section-heading h1{
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.plan-card{
+    width: 20rem;
+    margin: 0.75rem;
+    box-shadow: 2px 2px 10px var(--primary-color-light);
+    transition: all 0.3s ease-in-out;
+}
+.plan-card:hover{
+    transform: scale(1.1);
+}
+.card-header{
+    text-align: center;
+    padding: 5px;
+    font-size: 22px;
+    text-transform: uppercase;
+    background-color: var(--primary-color-light);
+}
+.card-body{
+    padding: 2rem;
+}
+.card-body h1{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+.card-body p{
+    text-align: center;
+    color: #bbb;
+}
+.card-body ul{
+    margin: 1rem 2rem;
+
+}
+.card-body ul li{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.btn-buy-now{
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.popular-plan{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.popular-plan .card-header{
+    background-color: var(--primary-color);
+    border-bottom: 1px solid #fff;
+    /* color: black; */
+}
+.popular-plan .btn-buy-now{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.plan ul{
+    list-style-type: none;
+}
+.plan ul li::before{  /*pusedo element selector*/
+    display: inline-block;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url('./../images/check.svg');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+
+/* Partners */
+.partner{
+    margin: 2rem 6.5rem;
+}
+.pimg{
+    width: 10rem;
+    height: 5rem;
+    margin: 1rem;
+}
+.scroll-container{
+    overflow: hidden;
+}
+.scroll{
+    display: flex;
+    transform: translateX(100%);
+    animation: scrollanimation 10s linear infinite;
+}
+@keyframes scrollanimation{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-140%);
+    }
+}
+
+/* Footer */
+footer{
+    background-color: var(--primary-color-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Registration Form */
+
+*{
+    box-sizing: border-box;
+}
+.signup-card{
+    width: 25rem;
+    margin: 3rem auto;
+    /* border: 1px solid black; */
+}
+.signup-card .card-header{
+    background-color: #fff;
+}
+.signup-card .card-body{
+    padding: 2.5rem;
+}
+.form-group{
+    margin-bottom: 8px;
+}
+.form-group input,
+.form-group select{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    outline-color: var(--primary-color);
+
+}
+input[type="radio"]{
+    display: inline;
+    width: auto;
+    transform: scale(1.5);
+    margin: 0px 5px;
+}
+.btn-signup{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    outline-color: var(--primary-color);
+    margin-top: 0.75rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+
+}
+
+.error{
+    color: #ff0000;
+}
+.AI{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 6.5rem;
+
+}
+.AI-heading{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    
+}
+.AI-heading h1{
+    font-size: 3.5rem;
+}
+.AI-heading ul{
+    margin: 1rem 2rem;
+}
+.AI-heading ul li{
+    margin-bottom: 8px;
+    margin-right: 10px;
+    justify-content: space-between;
+}
+.AI-heading ul li span{
+    color: blue;
+    font-weight: 600;
+}
+.AI-heading ul{
+    list-style-type: none;
+}
+.AI-heading ul li::before{  /*pusedo element selector*/
+    display: inline-block;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background: url('./../images/check1.svg');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}
+.AI-image{
+    width: 50%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.AI-image img{
+    width: 100%;
+    height: 30rem;
+    transition: filter 1s; /* Smooth transition */
+}
+.AI-image img:hover {
+    
+}
+
